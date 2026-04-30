@@ -3,10 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Личный сайт разработчика</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Основные мета-теги -->
+    <title>Вадим Лызенков | Frontend-разработчик | Портфолио</title>
+    <meta name="description" content="Frontend-разработчик с 10+ годами коммерческой разработки. Создаю веб-приложения на Vue.js, TypeScript. Опыт в ERP-системах, логистике и автоматизации.">
+    <meta name="keywords" content="frontend, разработчик, vue.js, typescript, портфолио, erp, логистика, веб-разработка">
+    <meta name="author" content="Вадим Лызенков">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Theme color для мобильных браузеров -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyzenkov.github.io/">
     <style>
-        /* Простые стили для чистого и современного вида */
         * {
             margin: 0;
             padding: 0;
@@ -402,50 +421,55 @@
         </div>
 
         <!-- БЛОК ПРОЕКТОВ -->
-<div class="projects-section">
-    <h2>✨ Мои проекты</h2>
-    
-    <!-- Коммерческий опыт (NDA) -->
-    <div class="commercial-card">
-        <div class="commercial-header">
-            <span class="commercial-icon">🏗️</span>
-            <div>
-                <h3>Коммерческая разработка ERP-систем</h3>
-                <p class="commercial-subtitle">Логистика / Корпоративные решения / 2008–2026</p>
+        <div class="projects-section">
+            <h2>✨ Мои проекты</h2>
+
+            <!-- Коммерческий опыт (NDA) -->
+            <div class="commercial-card">
+                <div class="commercial-header">
+                    <span class="commercial-icon">🏗️</span>
+                    <div>
+                        <h3>Коммерческая разработка ERP-систем</h3>
+                        <p class="commercial-subtitle">Логистика / Корпоративные решения / 2008–2026</p>
+                    </div>
+                </div>
+                <div class="commercial-body">
+                    <p>Мой путь в IT начался с разработки и сопровождения крупных ERP-систем для логистических компаний.
+                        Эти проекты решали реальные бизнес-задачи и работают в продакшене на протяжении многих лет:</p>
+                    <ul class="commercial-list">
+                        <li>📦 <strong>Складской учёт</strong> — автоматизация учета запасных частей, ЗПУ и т.п.</li>
+                        <li>🚛 <strong>Транспортная логистика</strong> — формирование транспортных документов, контроль
+                            расхода топлива, формирование финансовых документов с соисполнителями и отчетов с
+                            количественными и экономическими показателями</li>
+                        <li>📊 <strong>BI-отчётность</strong> — дашборды для руководства, анализ KPI</li>
+                        <li>📧 <strong>Автоматизация офисной работы</strong> — автоматические рассылки, учёт документов,
+                            генерация отчётов и шаблонов</li>
+                        <li>🔌 <strong>Интеграции</strong> — SOAP, обмен данными ЭТРАН (железнодорожная накладная)</li>
+                    </ul>
+                    <p>Приобрёл опыт работы с архитектурой, производительностью, большими данными и командной
+                        разработкой.</p>
+                    <div class="nda-badge">🔒 Исходный код под NDA</div>
+                </div>
+            </div>
+
+            <!-- Публичные проекты -->
+            <h2 style="margin-top: 2rem; margin-bottom: 1rem;">🚀 Публичные проекты</h2>
+            <div class="projects">
+                <a href="https://lyzenkov.github.io/todo-voice-app/" class="project-card" target="_blank">
+                    <div class="project-title">🎙️ Голосовой ToDo</div>
+                    <div class="project-desc">Менеджер задач с управлением голосом. Добавляйте, выбирайте и отмечайте
+                        задачи, не отрывая рук от клавиатуры.</div>
+                    <div class="tech-badge">Vue 3 • TypeScript • Pinia • Web Speech API</div>
+                </a>
+
+                <!-- Здесь можно добавить другие публичные проекты -->
             </div>
         </div>
-        <div class="commercial-body">
-            <p>Мой путь в IT начался с разработки и сопровождения крупных ERP-систем для логистических компаний. 
-               Эти проекты решали реальные бизнес-задачи и работают в продакшене на протяжении многих лет:</p>
-            <ul class="commercial-list">
-                <li>📦 <strong>Складской учёт</strong> — автоматизация учета запасных частей, ЗПУ и т.п.</li>
-                <li>🚛 <strong>Транспортная логистика</strong> — формирование транспортных документов, контроль расхода топлива, формирование финансовых документов с соисполнителями и отчетов с количественными и экономическими показателями</li>
-                <li>📊 <strong>BI-отчётность</strong> — дашборды для руководства, анализ KPI</li>
-                <li>📧 <strong>Автоматизация офисной работы</strong> — автоматические рассылки, учёт документов, генерация отчётов и шаблонов</li>
-                <li>🔌 <strong>Интеграции</strong> — SOAP, обмен данными ЭТРАН (железнодорожная накладная)</li>
-            </ul>
-            <p>Приобрёл опыт работы с архитектурой, производительностью, большими данными и командной разработкой.</p>
-            <div class="nda-badge">🔒 Исходный код под NDA</div>
-        </div>
-    </div>
-
-    <!-- Публичные проекты -->
-    <h2 style="margin-top: 2rem; margin-bottom: 1rem;">🚀 Публичные проекты</h2>
-    <div class="projects">
-        <a href="https://lyzenkov.github.io/todo-voice-app/" class="project-card" target="_blank">
-            <div class="project-title">🎙️ Голосовой ToDo</div>
-            <div class="project-desc">Менеджер задач с управлением голосом. Добавляйте, выбирайте и отмечайте
-                задачи, не отрывая рук от клавиатуры.</div>
-            <div class="tech-badge">Vue 3 • TypeScript • Pinia • Web Speech API</div>
-        </a>
-        
-        <!-- Здесь можно добавить другие публичные проекты -->
-    </div>
-</div>
 
         <!-- ФУТЕР -->
         <div class="footer">
             <div class="social-links">
+                <!-- GitHub -->
                 <a href="https://github.com/lyzenkov" class="social-link" target="_blank" rel="noopener noreferrer">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -454,12 +478,23 @@
                     <span>GitHub</span>
                 </a>
 
+                <!-- Telegram -->
                 <a href="https://t.me/lyzenkov" class="social-link" target="_blank" rel="noopener noreferrer">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.15-.06-.21-.08-.07-.19-.05-.27-.03-.12.03-2.02 1.28-2.85 1.81-.27.18-.51.27-.73.27-.24 0-.63-.12-.92-.22-.43-.15-.77-.23-.74-.49.02-.13.2-.27.55-.41 2.14-.94 3.57-1.56 4.3-1.87 2.04-.86 2.47-1.01 2.74-1.01.06 0 .16.01.23.07.06.05.09.12.1.2.01.08-.01.18-.03.28z" />
                     </svg>
                     <span>Telegram</span>
+                </a>
+
+                <!-- HH.ru (HeadHunter) -->
+                <a href="https://irkutsk.hh.ru/resume/bed3f904ff1052bc200039ed1f33467a4e6d65" class="social-link"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 2.4c5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6-9.6-4.3-9.6-9.6 4.3-9.6 9.6-9.6zM8.4 7.2c1.3 0 2.4 1.1 2.4 2.4s-1.1 2.4-2.4 2.4-2.4-1.1-2.4-2.4 1.1-2.4 2.4-2.4zm0 6c1.6 0 3 1.4 3 3v2.4h-6v-2.4c0-1.6 1.4-3 3-3zm7.2 0c1.3 0 2.4-1.1 2.4-2.4s-1.1-2.4-2.4-2.4-2.4 1.1-2.4 2.4 1.1 2.4 2.4 2.4zm0 1.2c-1.6 0-3 1.4-3 3v2.4h6v-2.4c0-1.6-1.4-3-3-3z" />
+                    </svg>
+                    <span>HH.ru</span>
                 </a>
             </div>
 
