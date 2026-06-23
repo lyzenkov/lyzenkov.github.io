@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Основные мета-теги -->
+    <title>Вадим Лызенков | Frontend-разработчик | Портфолио</title>
+    <meta name="description"
+        content="Frontend-разработчик с 10+ годами коммерческой разработки. Создаю веб-приложения на Vue.js, TypeScript. Опыт в ERP-системах, логистике и автоматизации.">
+    <meta name="keywords"
+        content="frontend, разработчик, vue.js, typescript, портфолио, erp, логистика, веб-разработка">
+    <meta name="author" content="Вадим Лызенков">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Theme color для мобильных браузеров -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyzenkov.github.io/">
+    <style>
+        body {
+            background: #001820;
+            background: radial-gradient(at left top, #001820, #624866);
+            min-height: 100vh;
+            min-width: 100vw;
+            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            background-size: 200% 200%;
+            animation: gradientMove 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Контейнер, который центрирует блок по горизонтали */
+        .full-width-container {
+            display: flex;
+            justify-content: start;
+            width: 100%;
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        /* Сам блок */
+        .responsive-block {
+            width: 50%;
+            /* на десктопе половина ширины экрана */
+            max-width: 800px;
+            /* не больше 800px */
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Медиазапрос для планшетов и мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .name {
+                margin-bottom: 48px;
+            }
+
+            .responsive-block {
+                width: 100%;
+                /* на мобильных — вся ширина */
+                min-height: 100vh;
+            }
+
+            .full-width-container,
+            .responsive-block {
+                /* min-height: 100vh; */
+                /* min-height: auto; */
+                position: relative;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+
+            .project {
+                width: 100%;
+            }
+
+            .project-count {
+                width: 160px !important;
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
+
+        h2,
+        h3 {
+            font-weight: 300;
+        }
+
+        .mt-m24px {
+            margin-top: -24px;
+        }
+
+        .hi-container {
+            margin: 8px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            padding: 8px;
+            flex-wrap: wrap;
+            justify-content: end;
+            width: 100%;
+            margin: 48px 0 48px 0;
+        }
+
+        .skills img {
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            padding: 8px;
+            flex-wrap: wrap;
+            margin: 24px 0px;
+            justify-content: center;
+        }
+
+        .projects-title {
+            flex-grow: 1;
+            flex-basis: 0;
+            /* Сбрасывает базовый размер, заставляя блок расти из нуля */
+            min-width: 0;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .project-count {
+
+            aspect-ratio: 1/1;
+            width: 20%;
+            max-width: 400px;
+            border: #ffffff 1px solid;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 12px auto 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .project-count h1 {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .project {
+            max-width: 400px;
+            background-color: #e4e6e7;
+            color: #556264;
+            border-radius: 12px;
+            padding: 12px;
+            padding-bottom: 48px;
+            position: relative;
+        }
+
+        .project-picture {
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin: 4px 0 12px 0;
+            text-align: center;
+            color: #001820;
+        }
+
+        .project-description {
+            margin: 0;
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .project-footer {
+            font-size: 13px;
+            padding: 0 24px 12px 24px;
+            color: #001820;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 2rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        .email-link {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.5rem;
+        }
+
+        .email-link:hover {
+            border-bottom-color: white;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-width-container">
+        <div class="responsive-block">
+            <h1>Привет!</h1>
+            <h1 class="name">Я - Вадим Лызенков </h1>
+            <svg style="display: inline-block; width: 100%; height: auto; max-width: 100%;" height="200"
+                viewBox="0 0 280 200">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="45%" stop-color="#3a8e9f" />
+                        <stop offset="55%" stop-color="#d42aa8" />
+                    </linearGradient>
+                </defs>
+                <text y="50" font-family="Roboto, sans-serif" font-size="46" font-weight="700" fill="url(#grad)">
+                    <tspan x="0" dy="0">Frontend &amp;</tspan>
+                    <tspan x="0" dy="45">Fullstack</tspan>
+                    <tspan x="0" dy="45">Developer</tspan>
+                </text>
+            </svg>
+            <p class="mt-m24px">Разработчик с более 15 годами коммерческого опыта.</p>
+        </div>
+    </div>
+
+    <div class="full-width-container">
+        <div class="skills">
+            <img src="logos/javascript-svgrepo-com.svg" alt="JavaScript">
+            <img src="logos/typescript-icon-svgrepo-com.svg" alt="">
+            <img src="logos/vue-svgrepo-com.svg" alt="">
+            <img src="logos/nuxt-svgrepo-com.svg" alt="">
+            <img src="logos/pinia.webp" alt="">
+            <img src="logos/html-5-svgrepo-com.svg" alt="">
+            <img src="logos/css-svgrepo-com.svg" alt="">
+            <img src="logos/scss2-svgrepo-com.svg" alt="">
+            <img src="logos/vite-svgrepo-com.svg" alt="">
+            <!-- <img src="logos/axios.webp" alt=""> -->
+            <img src="logos/git-svgrepo-com.svg" alt="">
+            <!-- <img src="logos/cicd-solid-svgrepo-com.svg" alt=""> -->
+            <img src="logos/jira-svgrepo-com.svg" alt="">
+            <img src="logos/figma-svgrepo-com.svg" alt="">
+            <img src="logos/keycloak-svgrepo-com.svg" alt="">
+            <img src="logos/php-svgrepo-com.svg" alt="">
+            <img src="logos/sql-svgrepo-com.svg" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="full-width-container">
+        <div class="projects-title">
+            <h2>Имею огромный опыт разработки ERP-систем для логистических компаний.</h2>
+            <div class="project-count">
+                <h1>16+</h1>
+
+            </div>
+            <p>проектов</p>
+            <h3>Эти проекты решали реальные бизнес-задачи и работают в продакшене на протяжении многих лет</h3>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <h4 class="project-title">iTrans</h4>
+                <div class="project-description">
+                    ERP, b2b система управления контейнерными перевозками, для более 300 активных пользователей в РФ и
+                    за рубежом.
+                </div>
+                <div class="project-footer">
+                    Frontend, UI/UX
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">Транспортная логистика</h4>
+                <div class="project-description">
+                    Формирование транспортных документов, контроль расхода
+                    топлива, формирование финансовых документов с соисполнителями и отчетов с
+                    количественными и экономическими показателями
+                </div>
+                <div class="project-footer">
+                    Frontend, Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">Складской учёт</h4>
+                <div class="project-description">
+                    Автоматизация учета запасных частей, ЗПУ и т.п.
+                </div>
+                <div class="project-footer">
+                    Frontend, Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">Автоматизация производственных процессов</h4>
+                <div class="project-description">
+                    Организация пропускной системы контейнерного терминала, автоматизация процесса взвешивания грузового
+                    автотранспорта. Интеграция с устройствами сигнализации (светофоры) и взвешивания.
+                </div>
+                <div class="project-footer">
+                    Frontend, Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">BI-отчётность</h4>
+                <div class="project-description">
+                    Дашборды для руководства, анализ KPI
+                </div>
+                <div class="project-footer">
+                    Frontend, Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">Автоматизация офисной работы</h4>
+                <div class="project-description">
+                    Автоматические рассылки, учёт документооборота, генерация отчётов и шаблонов
+                </div>
+                <div class="project-footer">
+                    Frontend, Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-title">Интеграции</h4>
+                <div class="project-description">
+                    SOAP, обмен данными ЭТРАН (железнодорожная накладная)
+                </div>
+                <div class="project-footer">
+                    Backend, UI/UX, Системный анализ
+                </div>
+            </div>
+
+            
+
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <!-- GitHub -->
+            <a href="https://github.com/lyzenkov" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.21.68-.48 0-.23-.01-.88-.01-1.72-2.78.6-3.37-1.34-3.37-1.34-.46-1.18-1.12-1.49-1.12-1.49-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.1 2.93.84.09-.66.35-1.1.64-1.36-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.33 4.68-4.55 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                <span>GitHub</span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/lyzenkov" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.15-.06-.21-.08-.07-.19-.05-.27-.03-.12.03-2.02 1.28-2.85 1.81-.27.18-.51.27-.73.27-.24 0-.63-.12-.92-.22-.43-.15-.77-.23-.74-.49.02-.13.2-.27.55-.41 2.14-.94 3.57-1.56 4.3-1.87 2.04-.86 2.47-1.01 2.74-1.01.06 0 .16.01.23.07.06.05.09.12.1.2.01.08-.01.18-.03.28z" />
+                </svg>
+                <span>Telegram</span>
+            </a>
+
+            <!-- HH.ru (HeadHunter) -->
+            <a href="https://irkutsk.hh.ru/resume/bed3f904ff1052bc200039ed1f33467a4e6d65" class="social-link"
+                target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 2.4c5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6-9.6-4.3-9.6-9.6 4.3-9.6 9.6-9.6zM8.4 7.2c1.3 0 2.4 1.1 2.4 2.4s-1.1 2.4-2.4 2.4-2.4-1.1-2.4-2.4 1.1-2.4 2.4-2.4zm0 6c1.6 0 3 1.4 3 3v2.4h-6v-2.4c0-1.6 1.4-3 3-3zm7.2 0c1.3 0 2.4-1.1 2.4-2.4s-1.1-2.4-2.4-2.4-2.4 1.1-2.4 2.4 1.1 2.4 2.4 2.4zm0 1.2c-1.6 0-3 1.4-3 3v2.4h6v-2.4c0-1.6-1.4-3-3-3z" />
+                </svg>
+                <span>HH.ru</span>
+            </a>
+        </div>
+
+        <p>
+            📧 E-mail:
+            <a href="mailto:vadim.lyzenkov@mail.ru" class="email-link">
+                vadim.lyzenkov@mail.ru
+            </a>
+        </p>
+
+        <p class="copyright">© 2026 Вадим Лызенков</p>
+    </footer>
+
+</body>
+
+</html>
